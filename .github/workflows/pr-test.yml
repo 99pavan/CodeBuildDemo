@@ -28,8 +28,9 @@ jobs:
     name: PR Open
     needs: cdk-pr-1    # Synthesizes the CloudFormation template for the specified stack(s) or all
     runs-on: ubuntu-latest
-    environment: 
+    env: 
       name: uatenv
+      pwd: ${{ env.SECRET }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
