@@ -9,6 +9,7 @@ env:
   REGION: ap-east-1
   PYTHON_VERSION: '3.9.1'
   RUBY_VERSION: '2.6'
+  pwd: ${{ env.SECRET }}
       
 jobs:
   cdk-pr-1:
@@ -28,9 +29,9 @@ jobs:
     name: PR Open
     needs: cdk-pr-1    # Synthesizes the CloudFormation template for the specified stack(s) or all
     runs-on: ubuntu-latest
-    env: 
+    environment: 
       name: uatenv
-      pwd: ${{ env.SECRET }}
+      
     steps:
       - name: Checkout
         uses: actions/checkout@v2
