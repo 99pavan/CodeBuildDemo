@@ -24,7 +24,7 @@ jobs:
         run: echo "creating pull request in opened type"
       
   cdk-pr-2:
-#     if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/uat'
     name: PR Open
     needs: cdk-pr-1    # Synthesizes the CloudFormation template for the specified stack(s) or all
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
         uses: actions/checkout@v2
       
       - run: echo "working pull request in opened type"
-      - run: ${{ env.SECRET }}
+      - run: echo "${{ env.SECRET }}"
