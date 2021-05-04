@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: shell
+      
       - run: echo "creating pull request in opened type"
       - run: ${{ env.SECRET }}
   cdk-pr-2:
