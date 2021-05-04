@@ -13,7 +13,7 @@ env:
       
 jobs:
   cdk-pr-1:
-    if: github.ref == 'refs/heads/uat'
+#     if: github.ref == 'refs/heads/uat'
     name: PR Test       # Synthesizes the CloudFormation template for the specified stack(s) or all
     runs-on: ubuntu-latest
     environment: 
@@ -25,7 +25,7 @@ jobs:
       - run: echo "creating pull request in opened type"
       - run: ${{ env.SECRET }}
   cdk-pr-2:
-    if: github.ref == 'refs/heads/master'
+#     if: github.ref == 'refs/heads/master'
     name: PR Open       # Synthesizes the CloudFormation template for the specified stack(s) or all
     runs-on: ubuntu-latest
     environment: 
