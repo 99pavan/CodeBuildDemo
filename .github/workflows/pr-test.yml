@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: shell
-      - run: echo "creating pull request in opened type"
+        run: echo "creating pull request in opened type"
       
   cdk-pr-2:
 #     if: github.ref == 'refs/heads/master'
